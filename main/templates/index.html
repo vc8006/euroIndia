@@ -285,7 +285,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col my-4">
+                    <div class="col my-4" data-toggle="modal" data-target="#market_growth">
                       <div class="card service-box">
                         <!-- <ion-icon name="logo-react" class="serive-icon card-img-top"></ion-icon> -->
                         <img src="{% static 'assets/img/research.png' %}" class="card-img-top serive-icon"/>
@@ -843,6 +843,44 @@
     </div>
   </div>
 
+  <div class="modal fade modal-ser" id="market_growth" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-service" role="document">
+      <div class="modal-content modal-service">
+            <div class="text-center mt-5">
+                <h3>Market research and growth</h3>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group">
+                    <li class="single-content-list media py-2">
+                        <div class="content-icon pr-4">
+                            <span class="color-2"><i class="fas fa-angle-double-right"></i></span>
+                        </div>
+                        <div class="content-text media-body">
+                            <span>Design & Prepare Research Instrument</span>
+                        </div>
+                    </li>
+                    <li class="single-content-list media py-2">
+                        <div class="content-icon pr-4">
+                            <span class="color-2"><i class="fas fa-angle-double-right"></i></span>
+                        </div>
+                        <div class="content-text media-body">
+                            <span>Analyze Data</span>
+                        </div>
+                    </li>
+                    <li class="single-content-list media py-2">
+                        <div class="content-icon pr-4">
+                            <span class="color-2"><i class="fas fa-angle-double-right"></i></span>
+                        </div>
+                        <div class="content-text media-body">
+                            <span>Visualize & Communicate Results </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+      </div>
+    </div>
+  </div>
+
 <div id="chat" class="chat_icon">
     <!-- <i class="fas fa-paper-plane contact-icon mr-md-2"></i> -->
     <img src="{% static 'assets/img/messenger.png' %}" alt="">
@@ -873,9 +911,9 @@
         <input type="text" name="name" id="" data-question="Hi, welcome to Euro India, can we know your name?">
         <input type="text" name="email" id="" data-question="What is your email" data-name required>
         <input type="text" name="phone" id="" data-question="Thanks for sharing, What is your phone number">
-        <div data-question="Thanks for your information our team will contact you kindly confirm?">
-            <button id="confirm" class="btn btn-sm btn-success">Yes</button>
-            <button id="notconfirm" class="btn btn-sm btn-danger">No</button> 
+        <div id="chat-completed" data-question="Thanks for your information our team will contact you shortly">
+            <!-- <button id="confirm" class="btn btn-sm btn-success">Yes</button> -->
+            <!-- <button id="notconfirm" class="btn btn-sm btn-danger">No</button>  -->
         </div>
     </div>
     <form action="" id="submit_info_form">

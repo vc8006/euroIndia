@@ -18,11 +18,24 @@ $("#send").click(function(event){
     }
     $('.message-box [data-question]').appendTo('.submit_info');
 
+
+
     if($('.admin-client-message-wrap').children().length != 0)
     {
         questionFirst = $('[data-question]:first').attr('data-question');
         $('#chatlist ul').append('<li class="admin-message">' + questionFirst + '</li>');
         $('[data-question]:first').appendTo('.message-box');
+
+
+        if(questionFirst=="Thanks for your information our team will contact you shortly")
+        {
+            setTimeout(function (){
+  
+                // Something you want delayed.
+                $('#submit').trigger('click');
+              }, 3000);
+            
+        }
 
         $('#send').css({"pointer-events":"none"});
         $('.message-box [data-question]').bind('click change keyup',function(event){
@@ -35,6 +48,7 @@ $("#send").click(function(event){
                 $('#send').css({"pointer-events":"auto"});
             }
         });
+        
     }
 
     $('#chatlist').animate({scrollTop:5000});
@@ -51,13 +65,15 @@ $('.message-box [data-question]').bind('click change keyup',function(event){
     }
 });
 
-$("#confirm").click(function(event){
-    $('#submit').trigger('click');
-});
+// $('#submit').trigger('click');
 
-$("#notconfirm").click(function(event){
-    location.reload();
-});
+// $("#confirm").click(function(event){
+//     $('#submit').trigger('click');
+// });
+
+// $("#notconfirm").click(function(event){
+//     location.reload();
+// });
 
 $('.chat_icon').click(function(event){
     $('.chatbot-box').toggleClass('active');
