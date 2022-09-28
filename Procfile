@@ -1,1 +1,1 @@
-web: gunicorn euroIndia.wsgi --log-file -
+web: gunicorn euroIndia.wsgi
