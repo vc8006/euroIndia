@@ -1,0 +1,1 @@
+web: gunicorn euroIndia.wsgi --log-file -
